@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 
 
@@ -7,19 +7,64 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
+
   }
+
+  :root{
+    --primary-color: #1C64F2;
+    --secondary-color: #1a02fa;
+    --tertiary-color: #707070;
+    --quaternary-color: #fff;
+    --quinary-color: #F8F9FA;
+    --senary-color: #aaa;
+    --secondary: #F8F9FA;
+    --font-color:#707070;
+  }
+
+  .dark-theme{
+    --primary-color: #1C64F2;
+    --secondary-color: #1a02fa;
+    --tertiary-color: #D1D5DB;
+    --quaternary-color: #1F2937;
+    --quinary-color: #111827;
+    --senary-color: #aaa;
+    --secondary: #4B5563;
+    --font-color:#D1D5DB;
+
+
+
+  }
+
   body {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #EEECDF;
+    background-color: var(--quinary-color);
   }
+
+.content {
+  position: fixed;
+  top: 25px;
+  right: 45px;
+  z-index: 9999;
+  cursor: pointer;
+
+
+}
+
+.content img {
+  width: 34px;
+  height: 34px;
+  
+}
+ 
+
   .wrapper {
     position: relative;
     max-width: 300px;
     width: 100%;
-    background: #fff;
+    background: var(--quaternary-color);
     border-radius: 12px;
     padding: 30px 25px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
@@ -33,51 +78,60 @@
     width: 100%;
     border-radius: 8px;
     padding: 0 45px 0 15px;
-    border: 1px solid #aaa;
-    background-color: transparent;
+    border: 1px solid var( --senary-color);
+    background-color: var(--secondary);
   }
   .password-box .copy-icon {
     position: absolute;
     right: 15px;
     top: 50%;
-    color: #707070;
+    color: var(--tertiary-color);
     font-size: 20px;
     cursor: pointer;
     transform: translateY(-50%);
   }
   .copy-icon:hover {
-    color: #1a02fa;
+    color: var(--primary-color);
   }
   .wrapper .range-box {
     display: flex;
     align-items: center;
     margin-top: 20px;
   }
+  .input-text{
+    color: var(--font-color);
+  }
   .range-box input {
     width: 100%;
     height: 5px;
-    accent-color: #6150f5;
+    color: var(--tertiary-color);
+    accent-color: var(--primary-color);
     cursor: pointer;
   }
   .range-box .slider-number {
     min-width: 30px;
     text-align: right;
     font-size: 17px;
-    color: #707070;
+    color: var(--tertiary-color);
   }
   
   .wrapper .generate-button {
     width: 100%;
+    height: 48px;
+    font-size: medium;
+    font-weight: bold;
     color: #fff;
     padding: 12px 0;
     margin-top: 20px;
-    background: #6150f5;
+    background: var(--primary-color);
     border: none;
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.2s ease;
   }
+
+
   .generate-button:hover {
-    background-color: #1a02fa;
+    background-color: var(--secondary-color);
   }
   
